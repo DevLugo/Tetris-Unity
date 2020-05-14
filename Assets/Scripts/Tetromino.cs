@@ -102,6 +102,7 @@ public class Tetromino : MonoBehaviour
             else
             {
                 transform.position += new Vector3(0, 1, 0);
+                FindObjectOfType<Game>().DeleteRow();
                 enabled = false;
                 FindObjectOfType<Game>().SpawnNextTetromino();
             }
